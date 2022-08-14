@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="nice to meet chu! 웹 퍼블리셔 추보경 포트폴리오" />
+    <meta name="keywords" content="웹 퍼블리셔, 경력 웹 퍼블리셔, 포트폴리오, 웹 퍼블리셔 포트폴리오, 추보경, 연세대학교, 나노공학과, 학생회">
+    <meta property="og:image" content="http://chuvable.cafe24.com/img/intro_memoji.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <title>나이스투미츄 | 연세대학교 나노공학과 학생회</title>
+    <link rel="icon" type="image/png" sizes="16x16"  href="/img/favicon-16x16.png">
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/project.css" />
+    <script src="/js/common.js" defer></script>
+</head>
+<body>
+    <div id="wrap">
+        <header class="header">
+            <div class="header__inner">
+                <h1 class="logo"><a href="/"><span class="blind">웹 퍼블리셔 추보경 포트폴리오 로고</span></a></h1>
+                <span class="header__text">From Web Publisher to Front End Developer</span>
+                <div class="header__btn-wrap">
+                    <button class="header__btn-gnb header__btn-close" onclick="javascript:window.close()">
+                        <img src="/img/icon_close.svg" alt="창 닫기">
+                    </button>
+                </div>
+            </div>
+        </header>
+        <!-- header and nav -->
+
+        <article class="details">
+            <h2 class="details__name">연세대학교 나노공학과 학생회</h2>
+            <div class="details__main-img">
+                <img src="/img/yonsei_main.jpg" alt="프로젝트 메인이미지" />
+            </div>
+            <div class="details__link-wrap">
+                <a href="https://www.figma.com/proto/KsxXaGIfgPiu8XkOdIUR5Z/Untitled?node-id=2%3A4&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=2%3A4&show-proto-sidebar=1" target="_blank">프로토타입 확인</a>
+                <a onclick="modalOn()">이렇게 작업했어요</a>
+            </div>
+            <section class="details__info-wrap">
+                <h3 class="details__info-title">학교, 학과 공지시스템과 관리자시스템 구축</h3>
+                <p class="details__info-txt">
+                    외부 개발자와 직접 git과 zoom을 통해 협력하며 연세대학교 나노공학과 학생회 공지 시스템을 구축하였습니다. 첫 번째 메뉴인 학과 공지는 연세대학교 사이트 자체에서 크롤링 하여 
+                    학과 공지를 가져오기 때문에 어떤 글이 들어가도 레이아웃이 무너지지 않도록 작업하였고, 전체적으로 jquery와 javascript, ajax를 많이 사용하는 프로젝트였기에
+                    스크립트에 대한 이해도와 실력이 향상되었습니다.<br class="pc-con" />
+                </p>
+                <p class="details__info-txt--small">* 회사 사정으로 사이트가 폐쇄되어 Figma의 Prototype 기능을 사용하여 페이지 구성을 확인할 수 있게 해놓았습니다.</p>
+                <ul class="details__info-list">
+                    <li>
+                        <span class="details__list-title">[ 컬러스 작업물 ]</span>
+                    </li>
+                    <li>
+                        <span class="details__list-title">작업기간_</span>
+                        <span class="details__list-txt">2021.11 ~ 2021.12</span>
+                    </li>
+                    <li>
+                        <span class="details__list-title">기여도_</span>
+                        <span class="details__list-txt">100%</span>
+                    </li>
+                    <li>
+                        <span class="details__list-title">Pc, Mobile(O) / Tablet(X)</span>
+                    </li>
+                </ul>
+            </section>
+            <div class="details__img-wrap">
+                <div class="details__img-box details__img-box--1">
+                    <img src="/img/yonsei_pc.jpg" alt="pc 캡쳐본" />
+                </div>
+                <div class="details__img-box details__img-box--3">
+                    <img src="/img/yonsei_mo01.png" alt="mobile 캡쳐본" />
+                    <img src="/img/yonsei_mo02.png" alt="mobile 캡쳐본" />
+                    <img src="/img/yonsei_mo03.png" alt="mobile 캡쳐본" />
+                </div>
+                <div class="details__img-box details__img-box--3">
+                    <img src="/img/yonsei_mo04.png" alt="mobile 캡쳐본" />
+                    <img src="/img/yonsei_mo05.png" alt="mobile 캡쳐본" />
+                    <img src="/img/yonsei_mo06.png" alt="mobile 캡쳐본" />
+                </div>
+            </div>
+        </article>
+        <!-- details -->
+
+        <div class="modal">
+            <div class="modal__wrap">
+                <div class="modal__con">
+                    <button class="modal__btn-close" onclick="modalOff();"><img src="/img/icon_close.svg" alt="모달창 닫기"></button>
+                    <img src="/img/yonsei_codes.png" alt="나노과학공학과 codes, 원활한 협업을 위한 주석, 개발자에게 따로 전달하고나서도 해당 위치에 주석을 달아두어 원활한 협업이 진행될 수 있도록 작업합니다.
+                    서버에서 값 받아오기, 백단에서 넘겨주는 값을 ejs문법을 사용해서 새로운변수로 받아 값에 맞는 message 또는 화면을 출력합니다.
+                    Ajax 이용하기, ajax를 이용하여 서버에서 값을 받아오거나 화면 로드없이 일부 콘텐츠를 변경합니다. 감사합니다.">
+                </div>
+            </div>
+        </div>
+        <!-- modal -->
+
+        <footer class="footer">
+            <div class="footer__copyright">© 2022. Chuvable All rights reserved.</div>
+            <button class="footer__btn-top">TOP</button>
+        </footer>
+        <!-- footer -->
+    </div>
+</body>
