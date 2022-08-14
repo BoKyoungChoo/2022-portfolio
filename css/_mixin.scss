@@ -1,0 +1,95 @@
+@mixin center($w, $margin){
+    max-width:$w; 
+    width:100%;
+    padding:0 10px;
+    margin:$margin auto;
+}
+@mixin titleSize(){
+    font-size:3.6rem;
+    @media (max-width:480px){
+        font-size:3rem;
+    }
+}
+@mixin ellipsis($w){
+    display:block;
+    width:$w;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow:hidden;
+}
+@mixin ellipsis2($line, $w, $h){
+    display:block;
+    display: -webkit-box;
+    -webkit-line-clamp:$line;
+    width:$w;
+    height:$h;
+    -webkit-box-orient:vertical;
+    text-overflow: ellipsis;
+    overflow:hidden;
+}
+@mixin absolute($x, $y){
+    position:absolute;
+    left:$x;
+    top:$y;
+    @if ($x==50% and $y==50%){
+        transform:translate(-50%, -50%);
+    }@else if ($y==50%){
+        transform:translateY(-50%);
+    }@else if ($x==50%){
+        transform:translateX(-50%);
+    }
+}
+@mixin flexbox($item1:space-between, $item2:center){
+    display:flex;
+    justify-content:$item1;
+    align-items:$item2;
+}
+@mixin btn01($fz){
+    position:relative;
+    display: inline-block;
+    font-size:$fz;
+    line-height:5rem;
+    font-weight: bold;
+    padding:0 3.5rem;
+    border-top:1px solid #a0a0a0;
+    border-bottom:1px solid #a0a0a0;
+    background-color: #fff;
+    &:hover:before, &:hover:after{
+        height:100%;
+    }
+    &:before, &:after{
+        content:'';
+        position:absolute;
+        width:1px;
+        height:0;
+        background-color: #a0a0a0;
+        transition:0.2s;
+    }
+    &:before{
+        top:0;
+        left:0;
+    }
+    &:after{
+        bottom:0;
+        right:0;
+    }
+}
+@mixin animation($name, $speed, $bezier, $delay){
+    animation:$name $speed $bezier $delay forwards;
+}
+
+// 공통 keyframes
+@keyframes fadeIn {
+    to{opacity:1;}
+}
+@keyframes slideIn {
+    0%{
+        opacity: 0;
+        transform: translateY(5rem);
+        
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
